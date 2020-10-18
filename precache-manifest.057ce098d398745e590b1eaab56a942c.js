@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "353253032c569ea902344cbccd0b8c85",
+    "revision": "e1257bd8ae64a65a3b6922b75c1f273a",
     "url": "/flatjar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flatjar/static/css/2.abf6921b.chunk.css"
   },
   {
-    "revision": "20c179a67b228eac18dc",
+    "revision": "b81a7c598e2eb475dc31",
     "url": "/flatjar/static/css/main.ca931ae1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flatjar/static/js/2.4da01035.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "20c179a67b228eac18dc",
-    "url": "/flatjar/static/js/main.7d3c2e06.chunk.js"
+    "revision": "b81a7c598e2eb475dc31",
+    "url": "/flatjar/static/js/main.dc88f120.chunk.js"
   },
   {
     "revision": "dc16b8a2d117ad53af4d",
