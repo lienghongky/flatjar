@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca931ae1.chunk.css",
-    "main.js": "/static/js/main.d7db66dd.chunk.js",
-    "main.js.map": "/static/js/main.d7db66dd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
-    "static/css/2.d2c42c83.chunk.css": "/static/css/2.d2c42c83.chunk.css",
-    "static/js/2.4da01035.chunk.js": "/static/js/2.4da01035.chunk.js",
-    "static/js/2.4da01035.chunk.js.map": "/static/js/2.4da01035.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.5c28ca8dfc42a207db4e326b2e6230dd.js": "/precache-manifest.5c28ca8dfc42a207db4e326b2e6230dd.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d2c42c83.chunk.css.map": "/static/css/2.d2c42c83.chunk.css.map",
-    "static/css/main.ca931ae1.chunk.css.map": "/static/css/main.ca931ae1.chunk.css.map",
-    "static/js/2.4da01035.chunk.js.LICENSE.txt": "/static/js/2.4da01035.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/element-icons.d2f69a92.woff",
-    "static/media/teacher.597f57fe.svg": "/static/media/teacher.597f57fe.svg"
+    "main.css": "/flatjar/static/css/main.ca931ae1.chunk.css",
+    "main.js": "/flatjar/static/js/main.521f9eab.chunk.js",
+    "main.js.map": "/flatjar/static/js/main.521f9eab.chunk.js.map",
+    "runtime-main.js": "/flatjar/static/js/runtime-main.8318868b.js",
+    "runtime-main.js.map": "/flatjar/static/js/runtime-main.8318868b.js.map",
+    "static/css/2.abf6921b.chunk.css": "/flatjar/static/css/2.abf6921b.chunk.css",
+    "static/js/2.4da01035.chunk.js": "/flatjar/static/js/2.4da01035.chunk.js",
+    "static/js/2.4da01035.chunk.js.map": "/flatjar/static/js/2.4da01035.chunk.js.map",
+    "index.html": "/flatjar/index.html",
+    "precache-manifest.ced0cfebefc6dbebc01f628718b864b1.js": "/flatjar/precache-manifest.ced0cfebefc6dbebc01f628718b864b1.js",
+    "service-worker.js": "/flatjar/service-worker.js",
+    "static/css/2.abf6921b.chunk.css.map": "/flatjar/static/css/2.abf6921b.chunk.css.map",
+    "static/css/main.ca931ae1.chunk.css.map": "/flatjar/static/css/main.ca931ae1.chunk.css.map",
+    "static/js/2.4da01035.chunk.js.LICENSE.txt": "/flatjar/static/js/2.4da01035.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/flatjar/static/media/element-icons.d2f69a92.woff",
+    "static/media/teacher.597f57fe.svg": "/flatjar/static/media/teacher.597f57fe.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.83c3e0c4.js",
-    "static/css/2.d2c42c83.chunk.css",
+    "static/js/runtime-main.8318868b.js",
+    "static/css/2.abf6921b.chunk.css",
     "static/js/2.4da01035.chunk.js",
     "static/css/main.ca931ae1.chunk.css",
-    "static/js/main.d7db66dd.chunk.js"
+    "static/js/main.521f9eab.chunk.js"
   ]
 }
