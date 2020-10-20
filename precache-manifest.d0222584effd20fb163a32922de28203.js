@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84c5fc09acb0370436c2d8efcf22a32e",
+    "revision": "5c8d50ee66b55bdeb57cf1b5320403d7",
     "url": "/flatjar/index.html"
   },
   {
-    "revision": "4f7fc3f3a79aa669d6ac",
+    "revision": "9acd85fe53c12a25c832",
     "url": "/flatjar/static/css/2.abf6921b.chunk.css"
   },
   {
-    "revision": "17cd9a5c30e5e32baa86",
+    "revision": "8f2eca7b06a1c80b19f8",
     "url": "/flatjar/static/css/main.ca931ae1.chunk.css"
   },
   {
-    "revision": "4f7fc3f3a79aa669d6ac",
-    "url": "/flatjar/static/js/2.618a0e8a.chunk.js"
+    "revision": "9acd85fe53c12a25c832",
+    "url": "/flatjar/static/js/2.4dec7a1a.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/flatjar/static/js/2.618a0e8a.chunk.js.LICENSE.txt"
+    "url": "/flatjar/static/js/2.4dec7a1a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "17cd9a5c30e5e32baa86",
-    "url": "/flatjar/static/js/main.1d138ca0.chunk.js"
+    "revision": "8f2eca7b06a1c80b19f8",
+    "url": "/flatjar/static/js/main.37d7f02e.chunk.js"
   },
   {
     "revision": "dc16b8a2d117ad53af4d",
