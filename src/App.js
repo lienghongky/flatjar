@@ -7,7 +7,7 @@ import { Button, i } from 'element-react';
 import { i18n } from 'element-react'
 import locale from 'element-react/src/locale/lang/en'
 import Nav from './layout/nav';
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
+import { BrowserRouter as Router,Route,Switch,withRouter } from 'react-router-dom'
 import Home from './pages/home/home'
 import Student from './pages/student/student';
 import Teacher from './pages/teacher/teacher';
@@ -30,15 +30,15 @@ class App extends React.Component{
       <Router basename={`${process.env.PUBLIC_URL}`}  >
         <Nav/>
         <Switch>
-          <Route path={"/"} exact render={()=><><Home/><Footer/></>}/>
-          <Route path={"/student"} render={()=><Student/>}/>
-          <Route path={"/teacher"} render={()=><Teacher/>}/>
-          <Route path={"/teacherdetail"} render={()=><TeacherDetail/>}/>
-          <Route path={"/help"} render={()=><Help/>}/>
-          <Route path={"/plan"} render={()=><Plan/>}/>
-          <Route path={"/history"} render={()=><History/>}/>
-          <Route path={"/login"} render={()=><Singin/>}/>
-          <Route path={"/signup"} render={()=><Signup/>}/>
+          <Route path={"/"} exact render={(props)=><><Home {...props}/><Footer/></>}/>
+          <Route path={"/student"} render={(props)=><Student {...props}/>}/>
+          <Route path={"/teacher"} render={(props)=><Teacher {...props}/>}/>
+          <Route path={"/teacherdetail"} render={(props)=><TeacherDetail {...props}/>}/>
+          <Route path={"/help"} render={(props)=><Help {...props}/>}/>
+          <Route path={"/plan"} render={(props)=><Plan {...props}/>}/>
+          <Route path={"/history"} render={(props)=><History {...props}/>}/>
+          <Route path={"/login"} render={(props)=><Singin {...props}/>}/>
+          <Route path={"/signup"} render={(props)=><Signup {...props}/>}/>
         </Switch>
         
       </Router>
@@ -46,4 +46,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default withRouter(App);

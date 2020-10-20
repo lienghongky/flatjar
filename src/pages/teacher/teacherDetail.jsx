@@ -56,7 +56,8 @@ class TeacherDetail extends Component {
             title: 'Congradulation!',
             message: 'You have suceefully book a lesson',
             offset: 100,
-            type: 'success'
+            type: 'success',
+            onClose:()=>{this.props.history.push('/student')}
           });
       
       }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Hightlight from './hightlight';
 import TeacherProfile from './teacherProfile';
-import {Icon,Carousel} from 'element-react'
+import {Icon,Carousel, Rate} from 'element-react'
 import Price from '../plan/price';
 import '../../assets/styles/utility.css';
 import { ReactComponent as HeroImage } from '../../assets/icons/teacher.svg'
@@ -153,6 +153,9 @@ class Home extends Component {
                             <div className="w-1/2 p-4">
                                 <h4>Student Name</h4>
                                 <p className="font-thin text-gray-500">120 Lessons</p>
+                                <div className="py-1 flex justify-start items-center">
+                                                        <Rate disabled={true} value={4.5} showText={true}/>
+                                                </div>
                                 <p className="text-gray-600">
                                 これは私の最初のレッスンです。 非常にべんきょうになりました。 はなしたくさん練習できました。 一生懸命勉強します。
                                 </p>

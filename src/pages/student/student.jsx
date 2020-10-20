@@ -236,7 +236,9 @@ A must for intermediate and advanced learners</span></p></li>
                                                 </div>
                                                 <div className="pt-4 flex-1 flex justify-center items-center">
                                                     {/* <Button type="primary" icon="edit"></Button> */}
-                                                    <Button type="success">Book</Button>
+                                                    <Link to="/teacherdetail">
+                                                      <Button  type="success">Book</Button>
+                                                    </Link>
                     
                                                 </div>
                                               </div>
