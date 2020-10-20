@@ -1,14 +1,20 @@
-import { Button, Icon, Rate, Table, Tabs, Tag } from 'element-react';
+import { Button, Icon, Rate, Table, Tabs, Tag, Form, Select, Input, DateRangePicker} from 'element-react';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Bar from '../../layout/bar';
 import SideBar from '../../layout/sideBar';
-class Student extends Component {
+class Teacher extends Component {
     state = {  }
     constructor(props) {
         super(props);
       
         this.state = {
+          
+          form: {
+            date:null,
+            user: '',
+            region: ''
+          },
           columns: [
             {
               type: 'expand',
@@ -166,6 +172,20 @@ A must for intermediate and advanced learners</span></p></li>
           }]
         }
       }
+      onClick = (e)=>{
+        console.log('Click')
+        console.log(this.props)
+        // this.props.history.push('/teacherdetail');
+      }
+      onSubmit(e) {
+        e.preventDefault();
+      }
+      
+      onChange(key, value) {
+        this.setState({
+          form: Object.assign(this.state.form, { [key]: value })
+        });
+      }
     render() { 
         const creditData={
             plan:{
@@ -184,41 +204,46 @@ A must for intermediate and advanced learners</span></p></li>
                 value:30
             }
         }
+        
         return ( 
             <div className="min-h-full flex bg-gray-200">
                 <Bar className="sm:hidden"/>
                 <SideBar className="hidden sm:static"/>
                 <div className="flex-1 flex flex-wrap justify-center pt-30 sm:pl-10">
-                    <div className="w-full md:w-1/2 lg:w-2/3 px-8">
-                        <div className="flex bg-white rounded-lg shadow-lg  text-gray-700 overflow-hidden mb-8">
-                            <div className="w-1/4 flex items-center justify-center bg-gray-600 text-white">
-                                <div className="">
-                                  <h3 className="font-extrabold text-6xl text-center">$</h3>
-                                  <Link to="/plan">
-                                    <Button className="bg-opacity-0" type="success" >GET MORE TICKETS</Button>
-                                  </Link>
-                                </div>
-                            </div>
-                            <div className="flex-1 flex divide-x py-8">
-                                <div className="w-1/3 text-center">
-                                    <h4 className=" text-sm  ">{creditData.plan.title}</h4>
-                                    <h1 className=" text-blue-400 text-4xl font-bold py-2">{creditData.plan.value}</h1>
-                                    <h4 className=" text-sm font-light pt-4">{creditData.plan.subtitle}</h4>
-                                    
-                                </div>
-                                <div className="w-1/3 text-center">
-                                    <h4 className=" text-sm  ">{creditData.usage.title}</h4>
-                                    <h1 className=" text-red-400 text-4xl font-bold py-2">{creditData.usage.value}</h1>
-                                    <h4 className=" text-sm font-light pt-4">{creditData.usage.subtitle}</h4>
-                                    
-                                </div>
-                                <div className="w-1/3 text-center">
-                                    <h4 className=" text-sm  ">{creditData.left.title}</h4>
-                                    <h1 className="text-green-400 text-4xl font-bold py-2">{creditData.left.value}</h1>
-                                    <h4 className=" text-sm font-light pt-4">{creditData.left.subtitle}</h4>
-                                </div>
-                                
-                            </div>
+                    <div className="w-full  px-8">
+                        <div className="flex bg-white rounded-lg shadow-lg  text-gray-700 p-8 mb-8">
+                        <Form inline={true} model={this.state.form} onSubmit={this.onSubmit.bind(this)} className="demo-form-inline">
+                          <Form.Item>
+                            <Input value={this.state.form.user} placeholder="Teacher Name" onChange={this.onChange.bind(this, 'user')}></Input>
+                          </Form.Item>
+                          <Form.Item>
+                            <Select value={this.state.form.region} placeholder="Gender">
+                              <Select.Option label="Female" value="Female"></Select.Option>
+                              <Select.Option label="Male" value="Male"></Select.Option>
+                              <Select.Option label="Both" value="Both"></Select.Option>
+                            </Select>
+                          </Form.Item>
+                          <Form.Item>
+                            <Select value={this.state.form.region} placeholder="Speak">
+                              <Select.Option label="Zone 1" value="Japanese"></Select.Option>
+                              <Select.Option label="Zone 2" value="Chinese"></Select.Option>
+                            </Select>
+                          </Form.Item>
+                          <Form.Item>
+                            <DateRangePicker
+                                isShowTime={true}
+                                value={this.state.form.date}
+                                placeholder="Pick a range"
+                                onChange={date=>{
+                                  console.debug('DateRangePicker1 changed: ', date)
+                                  this.setState({form:{date: date}})
+                                }}
+                                />    
+                          </Form.Item>
+                          <Form.Item>
+                            <Button nativeType="submit" type="primary">Search</Button>
+                          </Form.Item>
+                        </Form>
                         </div>
                         <div className="flex flex-wrap">
                             <div className="w-full">
@@ -229,14 +254,16 @@ A must for intermediate and advanced learners</span></p></li>
                                 <div className="w-full my-4">
                                     <div className="bg-white rounded-lg shadow-lg p-8">
                                       <div className="flex flex-wrap ">
-                                              <div className="w-full sm:w-auto px-4 py-4">
+                                              <div className="w-full sm:w-auto lg:w-1/5 px-4 py-4">
                                                 <img className="ml-auto mr-auto my-4 shadow-lg w-30 h-30 object-cover rounded-full border-gray-400 border-solid border-2" src="https://25again.com/wp-content/uploads/2019/07/side-profile-guy.jpg" />
                                                 <div className="py-1 flex justify-center items-center">
                                                         <Rate disabled={true} value={4.5} showText={true}/>
                                                 </div>
                                                 <div className="pt-4 flex-1 flex justify-center items-center">
                                                     {/* <Button type="primary" icon="edit"></Button> */}
-                                                    <Button type="success">Book</Button>
+                                                    <Link to="/teacherdetail">
+                                                    <Button onClick={this.onClick}  type="success">Book</Button>
+                                                    </Link>
                     
                                                 </div>
                                               </div>
@@ -251,7 +278,7 @@ A must for intermediate and advanced learners</span></p></li>
                                                     </ul>
 
                                               </div>
-                                              <div className="w-full sm:w-2/5">
+                                              <div className="w-full lg:w-1/2">
                                                 <Tabs activeName="1" onTabClick={ (tab) => console.log(tab.props.name) }>
                                                   <Tabs.Pane label="Intro" name="1">
                                                     <div className="">
@@ -271,7 +298,7 @@ A must for intermediate and advanced learners</span></p></li>
                             }
                         </div>
                       </div>
-                    <div className="w-full md:w-1/2  lg:w-1/3 px-8">
+                    {/* <div className="w-full md:w-1/2  lg:w-1/3 px-8">
                         <div className="p-6 bg-white shadow-lg rounded-lg rounded-b-none">
 
                             <div className="w-full relative">
@@ -335,7 +362,7 @@ A must for intermediate and advanced learners</span></p></li>
                             }
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
@@ -343,4 +370,4 @@ A must for intermediate and advanced learners</span></p></li>
     }
 }
  
-export default Student;
+export default Teacher;

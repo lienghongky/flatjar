@@ -10,11 +10,13 @@ import Nav from './layout/nav';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import Home from './pages/home/home'
 import Student from './pages/student/student';
-import Teacher from './pages/teacher';
+import Teacher from './pages/teacher/teacher';
+import TeacherDetail from './pages/teacher/teacherDetail';
 import Footer from './layout/footer';
 import NavBar from './layout/navBar';
 import Help from './pages/help';
 import Plan from './pages/plan/plan';
+import History from './pages/History/History';
 import Singin from './pages/Auth/singin';
 import Signup from './pages/Auth/signup';
 
@@ -25,14 +27,16 @@ i18n.use(locale);
 class App extends React.Component{
   render(){
     return (
-      <Router >
+      <Router basename={`${process.env.PUBLIC_URL}`}  >
         <Nav/>
         <Switch>
           <Route path={"/"} exact render={()=><><Home/><Footer/></>}/>
           <Route path={"/student"} render={()=><Student/>}/>
           <Route path={"/teacher"} render={()=><Teacher/>}/>
+          <Route path={"/teacherdetail"} render={()=><TeacherDetail/>}/>
           <Route path={"/help"} render={()=><Help/>}/>
           <Route path={"/plan"} render={()=><Plan/>}/>
+          <Route path={"/history"} render={()=><History/>}/>
           <Route path={"/login"} render={()=><Singin/>}/>
           <Route path={"/signup"} render={()=><Signup/>}/>
         </Switch>

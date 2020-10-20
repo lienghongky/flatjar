@@ -47,7 +47,7 @@ class Price extends React.Component {
                     {
                         plans.map((item,index)=>(
                             <div className="w-64 sm:w-48  p-2   floating-sm" key={index}>
-                                <div className={`rounded-lg shadow-lg text-center transition duration-500  transform hover:scale-105 hover:shadow-xl bg-gradient-to-br  ${index == 0?'from-pink-600 to-red-500':'from-purple-600 to-blue-500'} ` }>
+                                <div className={`rounded-lg shadow-xl text-center transition duration-500  transform hover:scale-105 hover:shadow-xl bg-gradient-to-br  ${index == 0?'from-pink-600 to-red-500':'from-purple-600 to-blue-500'} ` }>
                                     <h4 className="text-white text-lg font-bold pt-6">{item.numberOfLession} Lessions</h4>
                                     <h1 className="text-white text-4xl font-bold py-4">{item.price}</h1>
                                     <div className="flex justify-center">

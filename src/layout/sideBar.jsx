@@ -27,7 +27,7 @@ class SideBar extends Component {
             {
                 title:'History',
                 icon:'message',
-                url:'/'
+                url:'/history'
             }
         ]
         return (
