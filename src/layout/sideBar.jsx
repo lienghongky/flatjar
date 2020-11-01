@@ -10,24 +10,24 @@ class SideBar extends Component {
     render() { 
         const tabs = [
             {
-                title:'Home',
+                title:'Dashboard',
                 icon:'menu',
                 url:'/student'
+            },
+            {
+                title:'Teachers',
+                icon:'search',
+                url:'/teachers'
+            },
+            {
+                title:'History',
+                icon:'time',
+                url:'/history'
             },
             {
                 title:'Plan',
                 icon:'plus',
                 url:'/plan'
-            },
-            {
-                title:'Teacher',
-                icon:'star-on',
-                url:'/teacher'
-            },
-            {
-                title:'History',
-                icon:'message',
-                url:'/history'
             }
         ]
         return (

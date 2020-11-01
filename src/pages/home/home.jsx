@@ -75,7 +75,7 @@ class Home extends Component {
                             </h2>
                             <div className="mt-8 flex lg:flex-shrink-0 lg:mt-0">
                                 <div className="inline-flex rounded-md shadow">
-                                    <Link to="/" href="#" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                                    <Link to="/teachers" href="#" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                                     Get started
                                     </Link>
                                 </div>
@@ -106,7 +106,7 @@ class Home extends Component {
                             <Carousel.Item key={index}>
                                 <div className="w-full h-full p-2">
                                     <div className="bg-indigo-700 shadow-lg">
-                                    <img className="object-cover" src="https://mcvt-comet-37.fra1.cdn.digitaloceanspaces.com//previews/55128/preview_55128.jpg" alt=""/>
+                                    <img className="object-cover" src="https://image.freepik.com/free-vector/online-classes-kids-banner_48159-732.jpg" alt=""/>
                                     </div>
                                     
                                 </div>
@@ -127,18 +127,21 @@ class Home extends Component {
                
                <div className="flex flex-wrap justify-center p-8 sm:px-20">
                 {teachers.map((e)=>
-                    <div className="w-1/2 sm:w-1/4 p-2" key={e}>
+                    <div className="w-full sm:w-1/2 p-2" key={e}>
                         <TeacherProfile/>
                     </div>
                 )}
                </div>
                <div className="py-20 flex justify-center items-center">
                <div className="justify-center">
+
                     <p className="text-center m-4 max-w-2xl text-2xl leading-7 text-gray-700 lg:mx-auto">
                             See More Teachers.
                     </p>
                     <div className="flex justify-center">
-                    <button className="text-white  bg-indigo-600 p-4 px-8 rounded-lg shadow-lg m-4">See More</button>
+                        <Link to="/teachers">
+                            <button className="text-white  bg-indigo-600 p-4 px-8 rounded-lg shadow-lg m-4">See More</button>
+                        </Link>
                     </div>
                 </div>
                </div>

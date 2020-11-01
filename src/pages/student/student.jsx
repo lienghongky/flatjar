@@ -327,9 +327,11 @@ A must for intermediate and advanced learners</span></p></li>
                                             <li><p className="text-gray-600">Content: <Tag type="gray">Text Book</Tag></p></li>
                                             <li><p className="text-gray-600">Category: <Tag type="gray">Sport</Tag></p></li>
                                         </ul>
-                                        <div className="pt-4 flex justify-end items-center">
+                                        <div className="pt-4 flex space-x-2 justify-end items-center">
                                             <Button type="primary" icon="edit"></Button>
-                                            <Button type="success">Enter</Button>
+                                            <Link to="/live">
+                                              <Button type="success">Enter</Button>
+                                            </Link>
             
                                         </div>
                                     </div>

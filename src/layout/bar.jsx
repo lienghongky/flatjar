@@ -1,35 +1,41 @@
+import { Icon } from 'element-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Bar extends React.Component{
     render(){
         const tabs = [
             {
-                title:'Home',
-                icon:'',
-                url:''
+                title:'Dashboard',
+                icon:'menu',
+                url:'/student'
             },
             {
-                title:'Plan',
-                icon:'',
-                url:''
-            },
-            {
-                title:'Teacher',
-                icon:'',
-                url:''
+                title:'Teachers',
+                icon:'search',
+                url:'/teachers'
             },
             {
                 title:'History',
-                icon:'',
-                url:''
+                icon:'time',
+                url:'/history'
+            },
+            {
+                title:'Plan',
+                icon:'plus',
+                url:'/plan'
             }
         ]
         return (
-            <div className="flex sm:hidden fixed bottom-0 w-full bg-blue-600 shadow-lg ">
+            <div className="flex sm:hidden fixed bottom-0 w-full bg-gray-300 shadow-lg z-nav ">
                 {
                     tabs.map((e,index)=>(
                         <div className={`w-1/${tabs.length} flex justify-center items-center py-4 `} key={index}>
-                            <p className="text-sm font-bold text-white">{e.title}</p>
+                            <Link to={e.url}>
+                                <Icon className="mr-auto ml-auto" name={e.icon}/>
+                                <p className="text-xs font-thin text-black">{e.title}</p>
+                            </Link>
+                            
                         </div>
                     ))
                 }

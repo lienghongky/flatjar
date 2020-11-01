@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Bar from '../../layout/bar';
 import SideBar from '../../layout/sideBar';
+import Schedule from './schedule';
 class Teacher extends Component {
     state = {  }
     constructor(props) {
@@ -15,161 +16,6 @@ class Teacher extends Component {
             user: '',
             region: ''
           },
-          columns: [
-            {
-              type: 'expand',
-              expandPannel: function(data) {
-                return (
-                  <div>
-                    <div className="flex">
-                        <img className="shadow-lg w-16 h-16 object-cover rounded-full border-gray-400 border-solid border-2" src="https://25again.com/wp-content/uploads/2019/07/side-profile-guy.jpg" />
-                        <div className="flex-1 pl-4">
-                            <h3 className="text-sm font-bold">TEACHER NAME</h3>
-                            <p className="text-sm font-light">Japanese | Chinese | English</p>
-                            <div className="py-1">
-                                <Rate disabled={true} value={4.5} showText={true}/>
-                            </div>
-                            
-
-                        </div>
-                    </div>
-                    <ul className="pt-4 space-y-2">
-                        <li><p className="text-gray-600">Date: <span className="text-gray-900">2020 July 22</span></p></li>
-                        <li><p className="text-gray-600">Time: <span className="text-gray-900">21:00</span></p></li>
-                        <li><p className="text-gray-600">Content: <Tag type="gray">Text Book</Tag></p></li>
-                        <li><p className="text-gray-600">Category: <Tag type="gray">Sport</Tag></p></li>
-                        <li><p className="text-gray-600">Topic: <span className="text-gray-900">Enjoy reading all kinds of texts in Japanese.
-Look up any word with a single click.
-A must for intermediate and advanced learners</span></p></li>
-                    </ul>
-                  </div>
-                )
-              }
-            },
-            {
-              label: "ID",
-              prop: "id",
-            },
-            {
-              label: "Date",
-              prop: "date",
-            },
-            {
-                label: "Time",
-                prop: "time",
-            },
-            {
-                label: "Teacher",
-                prop: "name",
-            },
-            {
-                label: "Status",
-                prop: "status",
-                render: function(data){
-                    return <Tag type="success">{data.status}</Tag>
-                  }
-            }
-          ],
-          data: [{
-            date: '2016-05-03',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-02',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-04',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-01',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-08',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-06',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-07',
-            name: 'Tom',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }],
-          histories: [{
-            date: '2016-05-03',
-            name: 'かずせんせい',
-            status: 'Verified',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-02',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-04',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-01',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-08',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-06',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }, {
-            date: '2016-05-07',
-            name: 'かずせんせい',
-            status: 'Finished',
-            time: '20:00',
-            address: 'No. 189, Grove St, Los Angeles',
-            id: 'CA 90036'
-          }]
         }
       }
       onClick = (e)=>{
@@ -287,7 +133,11 @@ A must for intermediate and advanced learners</span></p></li>
                                                       </p>
                                                     </div>
                                                   </Tabs.Pane>
-                                                  <Tabs.Pane label="Schedule" name="2">Config</Tabs.Pane>
+                                                  <Tabs.Pane label="Video" name="2">
+                                                      <div className="">
+                                                      <iframe width="480" height="270" src="https://www.youtube.com/embed/cudYDTQFyt8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                      </div>
+                                                  </Tabs.Pane>
                                                 </Tabs>
                                               </div>
                                               

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import Bar from '../../layout/bar';
+import SideBar from '../../layout/sideBar';
 
 import { Button, Icon, Rate, Notification, Tabs, Tag, Form, Select, Input, Steps, DatePicker, Dialog} from 'element-react';
+import Schedule from './schedule';
 
 class TeacherDetail extends Component {
     constructor(props) {
@@ -48,6 +51,15 @@ class TeacherDetail extends Component {
             
           }
     }
+    submitRating(e){
+        Notification({
+            title: 'Thank you for your reviewing!',
+            message: 'Your experience infomation is importance to us',
+            offset: 100,
+            type: 'success',
+            // onClose:()=>{this.props.history.push('/student')}
+          });
+    }
     onSubmit(e) {
         e.preventDefault();
       }
@@ -70,8 +82,11 @@ class TeacherDetail extends Component {
       }
     render() { 
         return ( 
-            <div className="bg-gray-200 min-h-full p-20 flex flex-wrap">
-                <div className="w-2/3 p-4">
+            <div className="bg-gray-200 min-h-full  flex pb-20">
+                <Bar className="sm:hidden"/>
+                <SideBar className="hidden sm:static"/>
+                <div className=" flex flex-wrap pt-30">
+                <div className="w-full sm:w-2/3 px-4">
                                     <div className="bg-white p-8 rounded-lg">
                                       <div className="flex flex-wrap ">
                                               <div className="w-full sm:w-auto px-4 py-4">
@@ -94,17 +109,17 @@ class TeacherDetail extends Component {
                                                     </ul>
 
                                               </div>
-                                              <div className="w-2/5 flex-col">
-                                                <div className="py-4 flex-1 flex justify-end items-center">
+                                              <div className="w-full sm:w-2/5 flex-col">
+                                                <div className="py-4 flex-1 flex justify-start sm:justify-end items-center">
                                                     <Button type="primary" icon="star-on"></Button>
                                                     <Button type="primary" icon="more"></Button>
                                                 </div>
-                                                <div className="py-1 flex justify-end items-center">
+                                                <div className="py-1 flex justify-start sm:justify-end items-center">
                                                             <Rate disabled={true} value={4.5} showText={true}/>
                                                 </div>
                                                 
-                                                <ul className="text-sm space-y-2 font-light text-right">
-                                                        <li><p className="text-gray-600 justify-self-end">Students: <span className="text-black">2055</span></p></li>
+                                                <ul className="text-sm space-y-2 font-light text-left sm:text-right">
+                                                        <li><p className="text-gray-600 justify-self-start sm:justify-self-end">Students: <span className="text-black">2055</span></p></li>
                                                         <li><p className="text-gray-600">Lessons: <span className="text-black ">30000</span></p></li>
                                                         
                                                 </ul>
@@ -163,8 +178,48 @@ Also, please remember to give me more than 24 hour notice when you need to resch
                                                       </div>
                                                     </div>
                                                   </Tabs.Pane>
-                                                  <Tabs.Pane label="Schedule" name="2">Config</Tabs.Pane>
-                                                  <Tabs.Pane label="Review" name="3">Review</Tabs.Pane>
+                                                  <Tabs.Pane label="Schedule" name="2">
+                                                      <Schedule/>
+                                                  </Tabs.Pane>
+                                                  <Tabs.Pane label="Review" name="3">
+                                                      <div className="">
+                                                          
+                                                        <h3 className="py-6">How is your experiences with our teacher!</h3>
+                                                      <Rate
+                                                        showText={true}
+                                                        texts={['oops', 'disappointed', 'normal', 'good', 'great']}
+                                                        />
+                                                    <Input
+                                                        className="mt-8"
+                                                        type="textarea"
+                                                        autosize={{ minRows: 4, maxRows: 8}}
+                                                        placeholder="Please input"
+                                                    />
+                                                    <div className="flex justify-end items-center py-6">
+                                                        <Button onClick={this.submitRating}>Submit</Button>
+                                                    </div>
+                                                    <div className="flex flex-col">
+                                                            {
+                                                                [1,2,3,4,5,6].map((e,index)=>(
+                                                                    <div className="bg-gray-100 rounded-lg p-4 my-4 flex justify-end items-center">
+                                                                        <img className="ml-auto mr-auto my-4 shadow-lg w-20 h-20 object-cover rounded-full border-gray-400 border-solid border-2" src="https://25again.com/wp-content/uploads/2019/07/side-profile-guy.jpg" />
+                                                                        <div className="flex-1 pl-4">
+                                                                        <h3 className="font-bold text-lg">REVIEWER***NICKNAME</h3>
+                                                                        <div className="py-1 flex justify-start items-center">
+                                                                            <Rate disabled={true} value={4.5} showText={true}/>
+                                                                        </div>
+                                                                        <p
+                                                                            className="text-light text-black"
+                                                                        >
+                                                                            It was very easy to listen to English, and the questions were handled carefully. It was a request less than 24 hours, but it was helpful to answer.
+                                                                            I took the lesson of the instructor after a long time. We talked about recent events around us. I would like to increase my expressions and vocabulary so that I can spread the story on various topics. Also thank you next time.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                ))
+                                                            }
+                                                          </div>
+                                                      </div>
+                                                  </Tabs.Pane>
 
                                                 </Tabs>
                                               </div>
@@ -172,7 +227,7 @@ Also, please remember to give me more than 24 hour notice when you need to resch
                                       </div>
                                   </div>
                                 </div>
-                <div className="w-1/3 p-4">
+                <div className="w-full sm:w-1/3 px-4">
                     <div className="sticky">
                         <div className="bg-white font-light rounded-lg shadow-lg p-4">
                             <ul className="text-lg space-y-2  text-center py-8">
@@ -229,6 +284,7 @@ Also, please remember to give me more than 24 hour notice when you need to resch
                             <Button onClick={ () => this.setState({ dialogVisible: true }) } className="w-full" size="large" type="primary" >Book Now</Button>
                                 <Dialog
                                     title="Booking info"
+                                    size="large"
                                     visible={ this.state.dialogVisible }
                                     onCancel={ () => this.setState({ dialogVisible: false }) }
                                 >
@@ -298,6 +354,7 @@ Also, please remember to give me more than 24 hour notice when you need to resch
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
          );
     }

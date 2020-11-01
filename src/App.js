@@ -3,22 +3,22 @@ import './App.css';
 import './assets/styles/main.css';
 import './assets/styles/utility.css';
 import 'element-react';
-import { Button, i } from 'element-react';
 import { i18n } from 'element-react'
 import locale from 'element-react/src/locale/lang/en'
-import Nav from './layout/nav';
 import { BrowserRouter as Router,Route,Switch,withRouter } from 'react-router-dom'
+import Nav from './layout/nav';
 import Home from './pages/home/home'
 import Student from './pages/student/student';
 import Teacher from './pages/teacher/teacher';
 import TeacherDetail from './pages/teacher/teacherDetail';
 import Footer from './layout/footer';
-import NavBar from './layout/navBar';
 import Help from './pages/help';
 import Plan from './pages/plan/plan';
 import History from './pages/History/History';
 import Singin from './pages/Auth/singin';
 import Signup from './pages/Auth/signup';
+import TeacherDashboard from './pages/teacher/teacherDashboard';
+import Live from './pages/student/live';
 
 
 
@@ -32,8 +32,10 @@ class App extends React.Component{
         <Switch>
           <Route path={"/"} exact render={(props)=><><Home {...props}/><Footer/></>}/>
           <Route path={"/student"} render={(props)=><Student {...props}/>}/>
-          <Route path={"/teacher"} render={(props)=><Teacher {...props}/>}/>
+          <Route path={"/teacher"} render={(props)=><TeacherDashboard {...props}/>}/>
+          <Route path={"/teachers"} render={(props)=><Teacher {...props}/>}/>
           <Route path={"/teacherdetail"} render={(props)=><TeacherDetail {...props}/>}/>
+          <Route path={"/live"} render={(props)=><Live {...props}/>}/>
           <Route path={"/help"} render={(props)=><Help {...props}/>}/>
           <Route path={"/plan"} render={(props)=><Plan {...props}/>}/>
           <Route path={"/history"} render={(props)=><History {...props}/>}/>

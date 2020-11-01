@@ -22857,6 +22857,10 @@ h3 {
   z-index: auto;
 }
 
+.z-nav {
+  z-index: 9999;
+}
+
 .hover\:z-0:hover {
   z-index: 0;
 }
@@ -22885,6 +22889,10 @@ h3 {
   z-index: auto;
 }
 
+.hover\:z-nav:hover {
+  z-index: 9999;
+}
+
 .focus\:z-0:focus {
   z-index: 0;
 }
@@ -22911,6 +22919,10 @@ h3 {
 
 .focus\:z-auto:focus {
   z-index: auto;
+}
+
+.focus\:z-nav:focus {
+  z-index: 9999;
 }
 
 .gap-0 {
@@ -50911,6 +50923,10 @@ h3 {
     z-index: auto;
   }
 
+  .sm\:z-nav {
+    z-index: 9999;
+  }
+
   .sm\:hover\:z-0:hover {
     z-index: 0;
   }
@@ -50939,6 +50955,10 @@ h3 {
     z-index: auto;
   }
 
+  .sm\:hover\:z-nav:hover {
+    z-index: 9999;
+  }
+
   .sm\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -50965,6 +50985,10 @@ h3 {
 
   .sm\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .sm\:focus\:z-nav:focus {
+    z-index: 9999;
   }
 
   .sm\:gap-0 {
@@ -78935,6 +78959,10 @@ h3 {
     z-index: auto;
   }
 
+  .md\:z-nav {
+    z-index: 9999;
+  }
+
   .md\:hover\:z-0:hover {
     z-index: 0;
   }
@@ -78963,6 +78991,10 @@ h3 {
     z-index: auto;
   }
 
+  .md\:hover\:z-nav:hover {
+    z-index: 9999;
+  }
+
   .md\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -78989,6 +79021,10 @@ h3 {
 
   .md\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .md\:focus\:z-nav:focus {
+    z-index: 9999;
   }
 
   .md\:gap-0 {
@@ -106959,6 +106995,10 @@ h3 {
     z-index: auto;
   }
 
+  .lg\:z-nav {
+    z-index: 9999;
+  }
+
   .lg\:hover\:z-0:hover {
     z-index: 0;
   }
@@ -106987,6 +107027,10 @@ h3 {
     z-index: auto;
   }
 
+  .lg\:hover\:z-nav:hover {
+    z-index: 9999;
+  }
+
   .lg\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -107013,6 +107057,10 @@ h3 {
 
   .lg\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .lg\:focus\:z-nav:focus {
+    z-index: 9999;
   }
 
   .lg\:gap-0 {
@@ -134983,6 +135031,10 @@ h3 {
     z-index: auto;
   }
 
+  .xl\:z-nav {
+    z-index: 9999;
+  }
+
   .xl\:hover\:z-0:hover {
     z-index: 0;
   }
@@ -135011,6 +135063,10 @@ h3 {
     z-index: auto;
   }
 
+  .xl\:hover\:z-nav:hover {
+    z-index: 9999;
+  }
+
   .xl\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -135037,6 +135093,10 @@ h3 {
 
   .xl\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .xl\:focus\:z-nav:focus {
+    z-index: 9999;
   }
 
   .xl\:gap-0 {
